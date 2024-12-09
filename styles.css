@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #1f2028;
+  transition: 0.4s;
+}
+.switch {
+  height: 80px;
+  background-color: #2d2e39;
+  padding: 0 1.5rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.input {
+  display: none;
+}
+.rail {
+  position: relative;
+  width: 87px;
+  height: 28px;
+  background-color: #3a3c4a;
+  border-radius: 3rem;
+}
+.circle {
+  display: block;
+  width: 35px;
+  height: 35px;
+  background-color: aliceblue;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  transition: 0.4s;
+}
+.indicator {
+  width: 12px;
+  height: 12px;
+  background-color: #3a3c4a;
+  border-radius: 50%;
+  margin-left: 1.5rem;
+  transition: 0.4s;
+}
+.input:checked ~ .rail .circle {
+  transform: translate(52px, -50%);
+  background-color: #1f2028;
+}
+.input:checked ~ .indicator {
+  background-color: #34c300;
+}
+body.yellow {
+  background-color: aliceblue;
+  transition: 0.4s;
+}
